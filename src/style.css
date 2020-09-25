@@ -14,8 +14,6 @@ main {
     color: rgba(255,255,255) !important;
 }
 .editor {
-    color: #ffffee;
-    background-color: #454A5A;
     border: 1px solid gray;
     border-radius: 6px;
     font-family: 'Source Code Pro', monospace;
