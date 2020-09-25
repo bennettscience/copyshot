@@ -4,6 +4,8 @@ import html2canvas from 'html2canvas';
 import {encodeUnicode, decodeUnicode} from './modules/encoding.js';
 import Prism from 'prismjs'
 
+import './style.css'
+
 const urlParams = new URLSearchParams(window.location.search);
 const param = urlParams.get("text");
 
@@ -14,7 +16,7 @@ const jar = CodeJar(document.querySelector(`.editor`), withLineNumbers(Prism.hig
 
 if(param) {
     console.log(param)
-    document.querySelector(`.text`).innerHTML = `<pre>${decodeUnicode(param)}</pre>`;
+    document.querySelector(`.result`).innerHTML = `<pre>${decodeUnicode(param)}</pre>`;
 }
 
 // get the text from the textarea and create a base64-encoded string
@@ -24,7 +26,7 @@ function createLink() {
     const encoded = encodeUnicode(text);
 
     html2canvas(editor, {width: 700}).then((canvas) => {
-        document.body.querySelector(`main`).appendChild(canvas);
+        document.body.querySelector(`.result`).appendChild(canvas);
     });
-    document.querySelector(`.text`).innerHTML = `<a href="/?text=${encoded}">Copy link for plaintext</a>`;
+    document.querySelector(`#text`).innerHTML = `<a href="/?text=${encoded}">Copy link for plaintext</a>`;
 }

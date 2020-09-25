@@ -1,0 +1,46 @@
+main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    overflow-y: hidden;
+}
+.editor-wrap {
+    grid-column: 1 / 4;
+    grid-row: 1 / 1;
+}
+.codejar-linenumbers {
+    color: rgba(255,255,255) !important;
+}
+.editor {
+    color: #ffffee;
+    background-color: #454A5A;
+    border: 1px solid gray;
+    border-radius: 6px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    font-weight: 400;
+    height: 340px;
+    letter-spacing: normal;
+    line-height: 20px;
+    padding: 10px;
+    tab-size: 4;
+}
+#create {
+    grid-column: 1 / 1;
+    width: 25%;
+    height: 55px;
+    border-radius: 6px;
+}
+.result {
+    grid-column: 4 / 6;
+    width: auto;
+    display: block;
+    position: relative;
+    grid-row: 1 / 2;
+}
+#text {
+    grid-column: 4 / 6;
+    grid-row: 2 / 2;
+}
