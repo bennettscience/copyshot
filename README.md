@@ -16,8 +16,10 @@ You can run the development server with `npm run serve` or deploy to your host t
 
 ## To do
 
-- Refactor the page layout
+- ~~Refactor the page layout~~
 - Run some checks on URL encode/decode
 - Restyle the editor (bad colors right now)
+- Allow user-defined language
+- Allow user-defined color scheme
 
   
